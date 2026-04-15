@@ -87,31 +87,32 @@
                 <div class="lg:col-span-2 glass-panel p-4 rounded-lg">
     <div class="flex justify-between items-center mb-4">
         <div class="flex flex-col">
-            <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Atmospheric Sounding</span>
-            <span class="text-amber-500 text-[11px] font-bold">KMPX (Chanhassen, MN)</span>
+            <span class="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Atmospheric Profiling</span>
+            <span class="text-amber-500 text-[11px] font-bold">KMPX // Minneapolis-St. Paul</span>
         </div>
-        <a href="https://www.spc.noaa.gov/exper/soundings/latest/" target="_blank" class="text-zinc-600 text-[9px] hover:text-amber-500 transition border border-zinc-800 px-2 py-1 rounded">
-            Launch SPC Source ↗
-        </a>
+        <div class="flex gap-2">
+            <a href="https://weather.cod.edu/analysis/" target="_blank" class="text-zinc-600 text-[9px] hover:text-amber-500 transition border border-zinc-800 px-2 py-1 rounded">
+                COD Analysis ↗
+            </a>
+        </div>
     </div>
     
-    <div class="bg-black/40 p-2 rounded border border-zinc-800 flex justify-center items-center min-h-[400px]">
-        <a href="https://www.spc.noaa.gov/exper/soundings/latest/MPX.gif" target="_blank">
-            <img src="https://www.spc.noaa.gov/exper/soundings/latest/MPX.gif" 
-                 referrerpolicy="no-referrer"
+    <div class="bg-black/60 p-2 rounded border border-zinc-800 flex justify-center items-center min-h-[450px]">
+        <a href="https://weather.cod.edu/data/sounding/MPX/MPX.latest.gif" target="_blank">
+            <img src="https://weather.cod.edu/data/sounding/MPX/MPX.latest.gif" 
                  alt="KMPX Radiosonde Sounding" 
-                 class="max-w-full rounded opacity-90 hover:opacity-100 transition duration-300 shadow-xl"
-                 onerror="this.onerror=null; this.src='https://weather.cod.edu/data/sounding/MPX/MPX.latest.gif';">
+                 class="max-w-full rounded opacity-90 hover:opacity-100 transition duration-300 shadow-2xl"
+                 onerror="this.src='https://www.spc.noaa.gov/exper/soundings/latest/MPX.gif';">
         </a>
     </div>
     
     <div class="mt-4 flex justify-between text-[9px] text-zinc-600 uppercase font-bold tracking-tighter">
         <div class="flex gap-4">
-            <span>00Z / 12Z Launch Times</span>
+            <span>Skew-T Log-P</span>
             <span>•</span>
-            <span>WMO: 72649</span>
+            <span>Station: 72649</span>
         </div>
-        <span class="text-zinc-700 italic">Auto-updates from NOAA/SPC</span>
+        <span class="text-zinc-700">Source: College of DuPage NextGen</span>
     </div>
 </div>
         </section>
