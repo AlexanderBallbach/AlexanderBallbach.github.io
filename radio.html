@@ -1,15 +1,76 @@
-<section id="radio">
-    <h2>Radio Propagation & Solar Cycle 25</h2>
-    <div class="radio-grid">
-        <a href="https://www.hamqsl.com/solar.html" title="Click to add Solar-Terrestrial Data to your website!">
-            <img src="https://www.hamqsl.com/solar101pic.php" alt="Solar-Terrestrial Data">
-        </a>
+<section id="radio" class="space-y-8">
+    <div class="flex items-end gap-4">
+        <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Radio Propagation & Solar Cycle 25</h2>
+        <div class="h-[2px] flex-grow bg-zinc-800 mb-2"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
         
-        <div class="station-info">
-            <h3>Station WD0P Status</h3>
-            <p><strong>Class:</strong> Amateur Extra</p>
-            <p><strong>Affiliation:</strong> Gopher Amateur Radio Club (W0YC) President</p>
-            <p><strong>Focus:</strong> Meshtastic (nRF52840) & Long-range Comms</p>
+        <div class="lg:col-span-3 space-y-6">
+            <div class="glass-panel p-4 rounded-lg overflow-hidden flex flex-col items-center">
+                <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-4 self-start">Primary VHF/HF Condition Monitor</span>
+                <a href="https://www.hamqsl.com/solar.html" target="_blank" class="hover:opacity-90 transition">
+                    <img src="https://www.hamqsl.com/solar101vhfpic.php" alt="VHF/HF Solar Data" class="max-w-full rounded border border-zinc-800">
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">MUF Forecast</span>
+                    <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                        <img src="https://www.hamqsl.com/solarmuf.php" alt="MUF Chart" class="rounded border border-zinc-800">
+                    </a>
+                </div>
+
+                <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">Solar System Indices</span>
+                    <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                        <img src="https://www.hamqsl.com/solarsystem.php" alt="Solar System" class="rounded border border-zinc-800">
+                    </a>
+                </div>
+
+                <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                    <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">Solar Flux Graph</span>
+                    <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                        <img src="https://www.hamqsl.com/solargraph.php" alt="Solar Graph" class="rounded border border-zinc-800">
+                    </a>
+                </div>
+            </div>
         </div>
+
+        <div class="lg:col-span-1 space-y-4">
+            <div class="glass-panel p-6 rounded-lg border-l-4 border-l-amber-600">
+                <h3 class="text-amber-500 text-xs font-bold uppercase tracking-widest">Station WD0P</h3>
+                <div class="mt-4 space-y-4">
+                    <div>
+                        <p class="text-[10px] uppercase text-zinc-500">Operator Class</p>
+                        <p class="text-zinc-200 font-bold">Amateur Extra</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase text-zinc-500">QTH</p>
+                        <p class="text-zinc-200 font-bold">Minneapolis, MN</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase text-zinc-500">Grid Square</p>
+                        <p class="text-zinc-200 font-bold italic text-sm">EN34</p>
+                    </div>
+                    <hr class="border-zinc-800">
+                    <div class="pt-2">
+                        <p class="text-[10px] uppercase text-zinc-500 mb-2">Hardware Focus</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-zinc-800 text-zinc-400 text-[9px] rounded font-bold">nRF52840</span>
+                            <span class="px-2 py-1 bg-zinc-800 text-zinc-400 text-[9px] rounded font-bold">LO-RA</span>
+                            <span class="px-2 py-1 bg-zinc-800 text-zinc-400 text-[9px] rounded font-bold">HF/VHF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="glass-panel p-4 rounded-lg group hover:border-amber-500/50 transition cursor-help">
+                <p class="text-[10px] font-bold text-zinc-500 group-hover:text-amber-500 transition">AFFILIATION</p>
+                <p class="text-zinc-300 text-xs mt-1">Gopher Amateur Radio Club (W0YC) - President</p>
+            </div>
+        </div>
+        
     </div>
 </section>
