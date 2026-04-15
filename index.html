@@ -20,10 +20,10 @@
                 <i data-lucide="radio"></i>
                 <span>WD0P // ARCHIVE</span>
             </div>
-            <div class="hidden md:flex gap-8 text-xs uppercase tracking-widest">
-                <a href="#radio" class="hover:text-amber-500 transition">Propagation</a>
-                <a href="#weather" class="hover:text-amber-500 transition">Environmental</a>
-                <a href="#portfolio" class="hover:text-amber-500 transition">Logbook</a>
+            <div class="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em]">
+                <a href="#radio" class="hover:text-amber-500 transition">Radio</a>
+                <a href="#weather" class="hover:text-amber-500 transition">Environment</a>
+                <a href="#portfolio" class="hover:text-amber-500 transition">Achievements</a>
             </div>
         </div>
     </nav>
@@ -32,25 +32,43 @@
 
         <section id="radio" class="space-y-8">
             <div class="flex items-end gap-4">
-                <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Solar Telemetry</h2>
+                <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Solar & Radio Telemetry</h2>
                 <div class="h-[2px] flex-grow bg-zinc-800 mb-2"></div>
             </div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2 glass-panel p-6 rounded-lg overflow-hidden flex justify-center items-center">
-                    <a href="https://www.hamqsl.com/solar.html" target="_blank">
-                        <img src="https://www.hamqsl.com/solar101pic.php" alt="Solar Data" class="max-w-full hover:opacity-80 transition">
-                    </a>
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                <div class="lg:col-span-3 space-y-6">
+                    <div class="glass-panel p-4 rounded-lg overflow-hidden flex flex-col items-center">
+                        <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-4 self-start">Condition Monitor</span>
+                        <a href="https://www.hamqsl.com/solar.html" target="_blank">
+                            <img src="https://www.hamqsl.com/solar101vhfpic.php" alt="VHF/HF Data" class="max-w-full rounded border border-zinc-800">
+                        </a>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">MUF Forecast</span>
+                            <img src="https://www.hamqsl.com/solarmuf.php" class="rounded border border-zinc-800">
+                        </div>
+                        <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">Solar Indices</span>
+                            <img src="https://www.hamqsl.com/solarsystem.php" class="rounded border border-zinc-800">
+                        </div>
+                        <div class="glass-panel p-4 rounded-lg flex flex-col items-center">
+                            <span class="text-[10px] uppercase tracking-widest text-zinc-500 mb-3">Flux Graph</span>
+                            <img src="https://www.hamqsl.com/solargraph.php" class="rounded border border-zinc-800">
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="glass-panel p-6 rounded-lg border-l-4 border-l-amber-600 space-y-4">
-                    <h3 class="text-amber-500 text-sm font-bold uppercase">Current Station Profile</h3>
-                    <ul class="text-xs space-y-3">
-                        <li class="flex justify-between"><span class="text-zinc-500">CALLSIGN:</span> <span class="text-zinc-200">WD0P</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500">CLASS:</span> <span class="text-zinc-200">AMATEUR EXTRA</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500">NET:</span> <span class="text-zinc-200">MESHTASTIC (nRF52840)</span></li>
-                        <li class="flex justify-between"><span class="text-zinc-500">ORG:</span> <span class="text-zinc-200 uppercase">W0YC President</span></li>
-                    </ul>
+
+                <div class="lg:col-span-1 space-y-4">
+                    <div class="glass-panel p-6 rounded-lg border-l-4 border-l-amber-600">
+                        <h3 class="text-amber-500 text-xs font-bold uppercase tracking-widest">Station WD0P</h3>
+                        <div class="mt-4 space-y-4">
+                            <div><p class="text-[10px] uppercase text-zinc-500">Class</p><p class="text-zinc-200 font-bold">Amateur Extra</p></div>
+                            <div><p class="text-[10px] uppercase text-zinc-500">Grid</p><p class="text-zinc-200 font-bold">EN34 (MPLS)</p></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,14 +76,23 @@
         <section id="weather" class="space-y-8">
             <div class="flex items-end gap-4">
                 <div class="h-[2px] flex-grow bg-zinc-800 mb-2"></div>
-                <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Minneapolis Forecast</h2>
+                <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Atmospheric Data</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="weather-display">
-                <div class="glass-panel p-6 rounded-lg animate-pulse h-32"></div>
-                <div class="glass-panel p-6 rounded-lg animate-pulse h-32"></div>
-                <div class="glass-panel p-6 rounded-lg animate-pulse h-32"></div>
-                <div class="glass-panel p-6 rounded-lg animate-pulse h-32"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-1 space-y-4" id="weather-display">
+                    <div class="glass-panel p-10 text-center animate-pulse">Initializing Telemetry...</div>
+                </div>
+
+                <div class="lg:col-span-2 glass-panel p-4 rounded-lg">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-[10px] uppercase tracking-widest text-zinc-500">KMPX Radiosonde (Skew-T)</span>
+                        <span class="text-amber-500 text-[9px] uppercase">Chanhassen, MN</span>
+                    </div>
+                    <div class="bg-zinc-950 p-2 rounded border border-zinc-800 flex justify-center">
+                        <img src="https://www.spc.noaa.gov/exper/soundings/latest/MPX.gif" class="max-w-full rounded opacity-90">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -74,73 +101,41 @@
                 <h2 class="text-3xl font-bold text-zinc-100 uppercase tracking-tighter">Achievement Log</h2>
                 <div class="h-[2px] flex-grow bg-zinc-800 mb-2"></div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="glass-panel p-8 hover:border-amber-500/50 transition group">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">Academic & Leadership</span>
-                    <h3 class="text-xl font-bold text-zinc-100 mt-2">President, W0YC</h3>
-                    <p class="mt-4 text-sm leading-relaxed text-zinc-500">Leading the Gopher Amateur Radio Club at the University of Minnesota, focusing on campus-wide RF infrastructure and student licensing.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                <div class="glass-panel p-6 border-l-2 border-amber-500/50">
+                    <h3 class="text-zinc-100 font-bold uppercase tracking-widest">Gopher Amateur Radio Club</h3>
+                    <p class="mt-2 text-zinc-500">President (W0YC). Managing RF infrastructure at UMN.</p>
                 </div>
-
-                <div class="glass-panel p-8 hover:border-amber-500/50 transition">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">Entrepreneurship</span>
-                    <h3 class="text-xl font-bold text-zinc-100 mt-2">TASHICOXO LLC</h3>
-                    <p class="mt-4 text-sm leading-relaxed text-zinc-500">Founder of a technology-driven paranormal research venture utilizing long-range communication protocols and specialized hardware.</p>
-                </div>
-
-                <div class="glass-panel p-8 hover:border-amber-500/50 transition">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">Engineering</span>
-                    <h3 class="text-xl font-bold text-zinc-100 mt-2">Geoengineering @ UMN</h3>
-                    <p class="mt-4 text-sm leading-relaxed text-zinc-500">Deep study in Earth Science and Physics (PHYS 1301W), with a focus on durable, "over-built" systems design.</p>
-                </div>
-
-                <div class="glass-panel p-8 hover:border-amber-500/50 transition">
-                    <span class="text-amber-500 text-xs font-bold uppercase tracking-[0.2em]">Technical Craft</span>
-                    <h3 class="text-xl font-bold text-zinc-100 mt-2">Custom Leatherwork</h3>
-                    <p class="mt-4 text-sm leading-relaxed text-zinc-500">Designing and hand-stitching "over-built" leather goods, including elastic-free traveler's notebooks optimized for durability.</p>
+                <div class="glass-panel p-6 border-l-2 border-amber-500/50">
+                    <h3 class="text-zinc-100 font-bold uppercase tracking-widest">TASHICOXO LLC</h3>
+                    <p class="mt-2 text-zinc-500">Founder. Technical paranormal research & long-range comms.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="border-t border-zinc-900 py-12 text-center text-[10px] uppercase tracking-widest text-zinc-600">
-        &copy; 2026 Alexander Ballbach // WD0P // 73
-    </footer>
-
     <script>
-        // Initialize Icons
         lucide.createIcons();
 
-        // Weather Integration (Minneapolis Focus)
         async function fetchWeather() {
             const display = document.getElementById('weather-display');
+            const API_KEY = 'YOUR_API_KEY_HERE'; // Get from openweathermap.org
             try {
-                // Replace with your OpenWeatherMap API Key
-                const API_KEY = 'YOUR_API_KEY'; 
-                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.9778&lon=-93.2650&units=imperial&appid=${API_KEY}`);
-                const data = await response.json();
-
+                const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.9778&lon=-93.2650&units=imperial&appid=${API_KEY}`);
+                const data = await res.json();
                 display.innerHTML = `
-                    <div class="glass-panel p-6 rounded-lg text-center">
-                        <div class="text-zinc-500 text-[10px] uppercase mb-2">Temp</div>
+                    <div class="glass-panel p-6 rounded-lg">
+                        <div class="text-[10px] uppercase text-zinc-500">Surface Temp</div>
                         <div class="text-3xl font-bold text-zinc-100">${Math.round(data.main.temp)}°F</div>
                     </div>
-                    <div class="glass-panel p-6 rounded-lg text-center">
-                        <div class="text-zinc-500 text-[10px] uppercase mb-2">Condition</div>
-                        <div class="text-3xl font-bold text-zinc-100 uppercase text-sm">${data.weather[0].description}</div>
-                    </div>
-                    <div class="glass-panel p-6 rounded-lg text-center">
-                        <div class="text-zinc-500 text-[10px] uppercase mb-2">Humidity</div>
-                        <div class="text-3xl font-bold text-zinc-100">${data.main.humidity}%</div>
-                    </div>
-                    <div class="glass-panel p-6 rounded-lg text-center">
-                        <div class="text-zinc-500 text-[10px] uppercase mb-2">Wind Speed</div>
-                        <div class="text-3xl font-bold text-zinc-100">${Math.round(data.wind.speed)} MPH</div>
+                    <div class="glass-panel p-6 rounded-lg">
+                        <div class="text-[10px] uppercase text-zinc-500">Conditions</div>
+                        <div class="text-xl font-bold text-zinc-200 uppercase">${data.weather[0].description}</div>
                     </div>
                 `;
             } catch (err) {
-                display.innerHTML = `<div class="col-span-full text-center py-10 text-amber-900 italic">API KEY REQUIRED FOR LIVE WEATHER DATA.</div>`;
+                display.innerHTML = `<div class="glass-panel p-6 text-amber-900 text-[10px] uppercase">Weather API Key Required</div>`;
             }
         }
         fetchWeather();
